@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CapitasAPP.Views.NewItemPage"
+             Title="Agregar Persona">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancelar" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Guardar" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="2" Padding="15">
+            <Label Text="Nombre" FontSize="Medium" />
+            <Entry x:Name="txtNombre" Keyboard="Text"  ClearButtonVisibility="WhileEditing" FontSize="Small" />
+            
+            <Label Text="Apellido" FontSize="Medium" />
+            <Entry x:Name="txtApellido" Keyboard="Text" ClearButtonVisibility="WhileEditing" FontSize="Small" Margin="0" />
+            
+            <Label Text="Telefono" FontSize="Medium" />            
+            <Entry x:Name="txtTelefono" Keyboard="Telephone" FontSize="Small" />
+            
+            <Label Text="Email" FontSize="Medium" />
+            <Entry x:Name="txtEmail" Keyboard="Email" ClearButtonVisibility="WhileEditing" FontSize="Small" Margin="0" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

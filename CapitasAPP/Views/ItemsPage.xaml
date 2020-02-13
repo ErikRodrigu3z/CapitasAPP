@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CapitasAPP.Views.ItemsPage"
+             Title="CAPITAS APP"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*" />
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="30*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+            <Label Text="ID" FontAttributes="Bold"  Grid.Column="0" Grid.Row="0" />
+            <Label Text="Nombre" FontAttributes="Bold" Grid.Column="1" Grid.Row="0"/>
+            <Label Text="Apellido" FontAttributes="Bold"  Grid.Column="2" Grid.Row="0"/>
+        </Grid>
+        <ScrollView>            
+            <ListView x:Name="lvPersonas"                
+                IsPullToRefreshEnabled="True"                          
+                IsRefreshing="{Binding IsRefreshing}"
+                
+                ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="15*" />
+                                        <ColumnDefinition Width="30*" />
+                                        <ColumnDefinition Width="30*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label  Grid.Column="0" Text="{Binding ID}"/>
+                                    <Label  Grid.Column="1" Text="{Binding Nombre}"/>
+                                    <Label Grid.Column="2" Text="{Binding Apellido}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        
+       
+    </StackLayout>
+
+</ContentPage>

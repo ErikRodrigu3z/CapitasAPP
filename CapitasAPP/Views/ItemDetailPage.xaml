@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CapitasAPP.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" Clicked="Save_Clicked" />         
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout Padding="15" >
+        <Label x:Name="txtTotalPagar" Text="Total A Pagar:" FontAttributes="Bold"  Grid.Column="1" Grid.Row="6" />
+        <Label x:Name="txtPagado" Text="Pagado:" FontAttributes="Bold"  Grid.Column="0" Grid.Row="6" />
+        <Label x:Name="txtDebe" Text="Debe:" FontAttributes="Bold"  Grid.Column="0" Grid.Row="7" />
+        <ScrollView>            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="10*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="10*" />
+                </Grid.RowDefinitions>
+
+                <Label x:Name="lblEnero" Text="Enero" FontAttributes="Bold"  Grid.Column="0" Grid.Row="0" />
+                <Entry x:Name="txtEnero"  Placeholder="" Keyboard="Numeric" Grid.Column="0" Grid.Row="0"/>
+
+                <Label Text="Julio" FontAttributes="Bold"  Grid.Column="1" Grid.Row="0" />
+                <Entry x:Name="txtJulio" Placeholder="" Keyboard="Numeric" Grid.Column="1" Grid.Row="0"/>
+
+                <Label Text="Febrero" FontAttributes="Bold"  Grid.Column="0" Grid.Row="1" />
+                <Entry x:Name="txtFebrero" Placeholder="" Keyboard="Numeric" Grid.Column="0" Grid.Row="1"/>
+
+                <Label Text="Agosto" FontAttributes="Bold"  Grid.Column="1" Grid.Row="1" />
+                <Entry x:Name="txtAgosto" Placeholder="" Keyboard="Numeric" Grid.Column="1" Grid.Row="1"/>
+
+                <Label Text="Marzo" FontAttributes="Bold"  Grid.Column="0" Grid.Row="2" />
+                <Entry x:Name="txtMarzo" Placeholder="" Keyboard="Numeric" Grid.Column="0" Grid.Row="2"/>
+
+                <Label Text="Septiembre" FontAttributes="Bold"  Grid.Column="1" Grid.Row="2" />
+                <Entry x:Name="txtSeptiembre" Placeholder="" Keyboard="Numeric" Grid.Column="1" Grid.Row="2"/>
+
+                <Label Text="Abril" FontAttributes="Bold"  Grid.Column="0" Grid.Row="3" />
+                <Entry x:Name="txtAbril" Placeholder="" Keyboard="Numeric" Grid.Column="0" Grid.Row="3"/>
+
+                <Label Text="Octubre" FontAttributes="Bold"  Grid.Column="1" Grid.Row="3" />
+                <Entry x:Name="txtOctubre" Placeholder="" Keyboard="Numeric" Grid.Column="1" Grid.Row="3"/>
+
+                <Label Text="Mayo" FontAttributes="Bold"  Grid.Column="0" Grid.Row="4" />
+                <Entry x:Name="txtMayo" Placeholder="" Keyboard="Numeric" Grid.Column="0" Grid.Row="4"/>
+
+                <Label Text="Noviembre" FontAttributes="Bold"  Grid.Column="1" Grid.Row="4" />
+                <Entry x:Name="txtNoviembre" Placeholder="" Keyboard="Numeric" Grid.Column="1" Grid.Row="4"/>
+
+                <Label Text="Junio" FontAttributes="Bold"  Grid.Column="0" Grid.Row="5" />
+                <Entry x:Name="txtJunio" Placeholder="" Keyboard="Numeric" Grid.Column="0" Grid.Row="5"/>
+
+                <Label Text="Diciembre" FontAttributes="Bold"  Grid.Column="1" Grid.Row="5" />
+                <Entry x:Name="txtDiciembre" Placeholder="" Keyboard="Numeric" Grid.Column="1" Grid.Row="5"/>                
+            </Grid>
+        </ScrollView>
+        <Label Text="Mandar Pago" FontAttributes="Bold"   />
+        <Switch ScaleX="-1" x:Name="chkMandar" IsToggled="false" OnColor="Green"  />
+        <!--<Button x:Name="btnGuardar" Text="Guardar"  />-->
+    </StackLayout>
+   
+</ContentPage>
